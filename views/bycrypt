@@ -1,0 +1,1 @@
+bcrypt.compareSync(req.body.password, result[0].password

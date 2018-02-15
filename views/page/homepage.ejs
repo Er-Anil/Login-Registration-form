@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <% include ../partials/head %>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <header>
+            <% include ../partials/header %>
+    </header>
+
+
+<% include ../partials/slideshow %>
+
+<% include ../partials/deftmember %>
+
+<!-- //////////////////////////////////////////////////////////////////////// -->
+
+>
+<div id="walkin" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">WALK IN DATES</h3>
+    <p class="text-center">come with full documents.<br> Remember to register your Interview!</p>
+    <ul class="list-group">
+      <li class="list-group-item">December <span class="label label-danger">closed!</span></li>
+      <li class="list-group-item">January <span class="label label-danger">closed!</span></li> 
+      <li class="list-group-item">February <span class="badge">3 vacancies</span></li> 
+    </ul>
+    
+
+
+    <!-- /////////////////////////////////////////////////////////////// -->
+    
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="/images/cat.jpg" alt=Deft-1 width="400" height="300">
+          <p><strong>Deft-1</strong></p>
+          <p>Office 1</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Enquiry</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="/images/cat.jpg" alt="Deft-2" width="400" height="300">
+          <p><strong>Deft-2</strong></p>
+          <p>Office 2</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Enquiry</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="/images/cat.jpg" alt="Deft-3" width="400" height="300">
+          <p><strong>Deft-3</strong></p>
+          <p>Office 3</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Enquiry</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- ///////////////////////////////////////////////////////////////////// -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Enquiry</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="query"><span class="glyphicon glyphicon-home"></span> Main office Mohali</label>
+              <input type="text" class="form-control" id="query" placeholder="Query?">
+            </div>
+            <div class="form-group">
+              <label for="username"><span class="glyphicon glyphicon-user"></span> Suggetions</label>
+              <input type="text" class="form-control" id="username" placeholder="Feedback">
+            </div>
+              <button type="submit" class="btn btn-block">Send 
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ////////////////////////////////////////////////////////////////////////// -->
+
+<!-- Container (Contact Section) -->
+<% include ../partials/deftemployee %>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<footer class="text-center">
+        <% include ../partials/footer %>
+</footer>
+
+
+
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>

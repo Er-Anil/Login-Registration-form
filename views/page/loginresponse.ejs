@@ -1,0 +1,72 @@
+<html>
+        <div class="container text-center">
+    <head>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+            <style>
+                img{
+                max-width:180px;
+                }
+                input[type=file]{
+                padding:10px;
+                background:#f2f8f8;}
+            </style>
+
+         <% include ../partials/head %>
+        <title>
+            login success
+        </title>
+
+        
+    </head>
+
+    <div class="row">
+    <body>
+
+            <header>
+                    <% include ../partials/header %>
+            </header>
+
+<!-- /////////////////////////////////////////// -->
+
+    <!-- <div>
+        <label for="myImg">Add Image: </label>
+        <input type='file' />
+        <img id="myImg" src="#" alt="your image" />
+     
+        <script>
+            $(function imageupload() {
+                $(":file").change(function imageupload() {
+                    if (this.files && this.files[0]) {
+                        var reader = new FileReader();
+                        reader.onload = imageIsLoaded;
+                        reader.readAsDataURL(this.files[0]);
+                    }
+                });
+            });
+
+            function imageIsLoaded(e) {
+                $('#myImg').attr('src', e.target.result);
+            };
+
+        </script>
+    </div> -->
+
+        <center>
+                <img src="/images/cat.jpg" alt=Profile_Picture width="400" height="300">
+            <h1>
+                Login Succesfully :) <br>
+                <br/> <a href="logoutpage"> <input type="button" onclick="logout" value="Logout" /></a>
+            </h1>
+        </center>
+
+        <footer class="text-center">
+                <% include ../partials/footer %>
+        </footer>
+    </body>
+
+    </div>
+    
+</html>
+ 

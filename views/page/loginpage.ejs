@@ -1,0 +1,52 @@
+
+<html>
+       <div class="container text-center"> <head>
+        
+        <% include ../partials/head %>
+        <title>Login test </title>
+        
+        
+        </head>
+
+        <div class="row">
+        <body>
+                <div>
+                    <div>
+                        <header>
+                         <% include ../partials/header %>
+                        </header>
+                </div>
+
+                 <div>
+                    <form action="/submitlogin" method="post">
+        
+                        <fieldset>
+                        <center>
+                    
+                        <label for="username">UserName: </label>
+                        <input type="text" id="name" name="username" autofocus /> <br/>
+                    
+                   
+                        <br/>    <label for="password"> Password : </label>
+                        <input type="password" id="password" name="password" /><br/>
+                    
+                       <br/> <input type="submit" value="Login Button" />
+                        </center>
+                </div>
+            <div>
+                    <br/><p>Not Register User click to  <a href="registerpage">  Register </a>
+            </div>
+        
+           
+        
+        </fieldset>
+        </form>
+        </div>
+     
+        </div>
+        
+                
+           
+        </body>
+        </html>
+        
